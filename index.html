@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welshy Shrooms</title>
+    <link href="output.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+    <!-- Add Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans bg-gray-800 text-white">
+    <!-- Header -->
+    <header class="border-b border-gray-700">
+        <!-- Upper Header -->
+        <div class="bg-white text-gray-800">
+            <div class="container mx-auto flex justify-between items-center py-2 px-4">
+                <!-- Add Logo Image -->
+                <div class="flex items-center">
+                    <!-- Custom logo size in pixels -->
+                    <img src="asset/logoWelshyShrooms.png" alt="Company Logo" class="h-18 w-18 ml-10 mr-6 rounded-full">
+                    <!-- Added padding-left for more space between logo and text -->
+                    <div class="text-4xl text-gray-700 font-bold pl-6">WELSY SHROOMS</div>
+                </div>
+                <div class="text-sm h-10">
+                    <span class="text-xl">Email: Info@welshyshrooms.com</span> | <span class="text-xl">Contact: +91 7565900909</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lower Header -->
+        <nav class="bg-gray-700">
+            <div class="container mx-auto flex justify-around py-3">
+                <a href="#how-product" class="hover:text-blue-400 transition-colors">Products</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">About Us</a>
+                <a href="#vision" class="hover:text-blue-400 transition-colors">Our Vision</a>
+                <a href="#contact" class="hover:text-blue-400 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="relative w-full">
+        <!-- Carousel Wrapper -->
+        <div class="relative overflow-hidden rounded-lg">
+            <!-- Slides -->
+            <div class="flex transition-transform duration-500 ease-out" id="carousel">
+                <img src="asset/cover2.jpg" class="w-full flex-shrink-0" alt="Slide 1">
+                <img src="asset/cover3.jpg" class="w-full flex-shrink-0" alt="Slide 2">
+                <img src="asset/cover4.jpg" class="w-full flex-shrink-0" alt="Slide 3">
+                <img src="asset/cover5.jpg" class="w-full flex-shrink-0" alt="Slide 4">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button id="prev" class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors">
+            <span>&lt;</span>
+        </button>
+        <button id="next" class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors">
+            <span>&gt;</span>
+        </button>
+
+        <!-- Indicators -->
+        <div class="flex justify-center space-x-2 mt-4">
+            <button class="w-3 h-3 bg-gray-500 rounded-full hover:bg-gray-900 transition-colors" data-slide="0"></button>
+            <button class="w-3 h-3 bg-gray-500 rounded-full hover:bg-gray-900 transition-colors" data-slide="1"></button>
+            <button class="w-3 h-3 bg-gray-500 rounded-full hover:bg-gray-900 transition-colors" data-slide="2"></button>
+            <button class="w-3 h-3 bg-gray-500 rounded-full hover:bg-gray-900 transition-colors" data-slide="3"></button>
+        </div>
+    </div>
+
+    <!-- Product Details Section -->
+    <section id="how-product" class="w-full flex items-center justify-between mt-4 bg-gray-800 py-16">
+
+        <!-- Image Section -->
+        <div class="w-1/2">
+            <img src="asset/product1.png" alt="Image description" class="w-full h-auto rounded-lg shadow-2xl">
+        </div>
+
+        <!-- Product Description Section -->
+        <div class="md:w-1/2 flex flex-col pl-10">
+            <h1 class="font-bold text-blue-400 mb-6 text-6xl">Mushroom Blend Powder</h1>
+            <p class="mt-4 text-lg text-gray-300">
+                Discover the natural benefits of our organic mushroom powder, crafted to support your overall health and well-being with just a teaspoon a day.
+            </p>
+
+            <div class="mt-6">
+                <h4 class="text-2xl font-semibold text-blue-400 mb-4">Key Features</h4>
+                <ul class="mt-4 list-disc list-inside text-gray-300 text-lg">
+                    <li>Boosts immunity with essential vitamins and antioxidants.</li>
+                    <li>Enhances focus and mental clarity, thanks to adaptogenic properties.</li>
+                    <li>Rich in beta-glucans, supporting overall health and wellness.</li>
+                </ul>
+            </div>
+
+            <div class="mt-6">
+                <h4 class="text-2xl font-semibold text-blue-400 mb-4">How to Use</h4>
+                <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                    Simply add one teaspoon of mushroom powder to your daily coffee, smoothies, or soups for a natural energy boost and earthy flavor.
+                </p>
+            </div>
+
+            <div class="mt-6">
+                <h4 class="text-2xl font-semibold text-blue-400 mb-4">Why Choose Us?</h4>
+                <p class="mt-4 text-lg text-gray-300 leading-relaxed">
+                    Our mushroom powder is made from sustainably grown, organic mushrooms and carefully processed to preserve all the natural benefits. It’s free from additives, fillers, and preservatives, ensuring you get the purest form of nutrition.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <div id="vision" class="bg-gray-600 py-12 px-4">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold text-blue-400 mb-8">Our Vision</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Card 1: Boost Immunity -->
+                <div class="bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Boost Immunity</h3>
+                    <p class="text-gray-300">Our mushroom-based products are rich in beta-glucans, which help strengthen the immune system, protecting your body against illnesses and infections naturally.</p>
+                </div>
+
+                <!-- Card 2: Enhance Health -->
+                <div class="bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Enhance Health</h3>
+                    <p class="text-gray-300">Packed with antioxidants and essential vitamins, our products promote overall well-being, reduce inflammation, and support healthy aging.</p>
+                </div>
+
+                <!-- Card 3: Natural Protein Source -->
+                <div class="bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Natural Protein Source</h3>
+                    <p class="text-gray-300">With high-quality plant-based protein, our mushrooms provide an excellent alternative to animal-based protein, supporting muscle repair and growth without any synthetic additives.</p>
+                </div>
+
+                <!-- Card 4: Sustainability -->
+                <div class="bg-gray-700 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl font-semibold text-blue-400 mb-4">Sustainability</h3>
+                    <p class="text-gray-300">Our products are sustainably sourced, ensuring that each mushroom is grown with eco-friendly methods, making a positive impact on both your health and the environment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+            <!-- Footer Column 1 -->
+            <div>
+                <h4 class="text-lg font-bold text-blue-400">About</h4>
+                <p class="mt-2 text-sm text-gray-300">We provide high-quality products tailored to your needs. Our goal is to ensure customer satisfaction.</p>
+            </div>
+    
+            <!-- Footer Column 2 -->
+            <div>
+                <h4 class="text-lg font-bold text-blue-400">Quick Links</h4>
+                <ul class="mt-2 text-sm space-y-2">
+                    <!-- Social Links -->
+                    <li class="flex items-center space-x-5 mt-5 mb-10">
+                        <img src="asset/instagram.png" alt="Instagram" class="h-10 w-10">
+                        <a href="https://www.instagram.com/welshyshrooms?igsh=cjE5YWo1a2Zwd3h1" class="hover:underline text-gray-300">Instagram</a>
+                    </li>
+                    <li class="flex items-center space-x-5 mt-5">
+                        <img src="asset/linkedin.png" alt="LinkedIn" class="h-10 w-10 ">
+                        <a href="https://www.linkedin.com/in/welshy-shrooms-5a0795345?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:underline text-gray-300">LinkedIn</a>
+                    </li>
+                    <li class="flex items-center space-x-5 mt-5">
+                        <img src="asset/twitter.png" alt="Twitter" class="h-10 w-10 ">
+                        <a href="#" class="hover:underline text-gray-300">X (Twitter)</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <!-- Footer Column 3 -->
+            <div>
+                <h4 class="text-lg font-bold text-blue-400">Contact Us</h4>
+                <ul class="mt-2 text-sm space-y-2">
+                    <li class="text-gray-300">📧 Email: Info@welshyshrooms.com</li>
+                    <li class="text-gray-300">📞 Phone: +91 7565900909</li>
+                    <li class="text-gray-300">📍 Address: Panki, Kanpur, India</li>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-6 text-center text-sm text-gray-300">
+            &copy; 2025 Product Company. All rights reserved.
+        </div>
+    </footer>
+    
+
+    <script>
+        // JavaScript for Carousel
+        const carousel = document.getElementById('carousel');
+        const slides = carousel.children;
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        const indicators = document.querySelectorAll('[data-slide]');
+
+        let currentIndex = 0;
+
+        // Update carousel position
+        const updateCarousel = (index) => {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('bg-gray-900', i === index);
+                indicator.classList.toggle('bg-gray-500', i !== index);
+            });
+        };
+
+        // Next button
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateCarousel(currentIndex);
+        });
+
+        // Previous button
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateCarousel(currentIndex);
+        });
+
+        // Indicator buttons
+        indicators.forEach((indicator) => {
+            indicator.addEventListener('click', (e) => {
+                currentIndex = parseInt(e.target.getAttribute('data-slide'));
+                updateCarousel(currentIndex);
+            });
+        });
+
+        // Initialize
+        updateCarousel(currentIndex);
+    </script>
+</body>
+</html>
