@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,28 +8,126 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
     <!-- Add Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        /* Mobile-Specific CSS */
+        @media (max-width: 768px) {
+            /* Header Adjustments */
+            .header-upper {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+                background-color: aliceblue;
+            }
+            .header-upper .flex {
+                
+                align-items: center;
+            }
+            .header-upper img {
+                margin: 0 auto 1rem;
+                width: 80px; /* Adjust logo size for mobile */
+                height: 80px;
+            }
+            .header-upper .text-4xl {
+                font-size: 2.0rem;
+                margin-left: 0;
+                margin-top: 0.5rem;
+                color: #355384;
+            }
+            .header-upper .text-xl {
+                font-size: 0.9rem;
+                margin-top: 1rem;
+                text-align: center;
+            }
+            .header-upper .text-sm {
+                gap: 0.5rem;
+            }
+            .flex-top{
+                display: flex;
+                flex-direction: column;
+            }
+            .top-header-second{
+                text-align: left;
+                color: #355384;
+            }
+           
+
+            /* Lower Header (Navigation) */
+            .header-lower {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem;
+            }
+            .header-lower a {
+                font-size: 1rem;
+            }
+           
+
+            /* Carousel Adjustments */
+            .carousel-controls {
+                display: none; /* Hide controls on mobile for simplicity */
+            }
+
+            /* Product Section */
+            #how-product {
+                flex-direction: column;
+                padding: 1rem;
+                background-color: #355384; /* Bind product with content */
+            }
+            #how-product .w-full {
+                width: 100%;
+            }
+            #how-product .md\:pl-10 {
+                padding-left: 0;
+            }
+            #how-product h1 {
+                font-size: 2rem;
+                text-align: center;
+            }
+            #how-product p, #how-product ul {
+                font-size: 1rem;
+            }
+
+            /* Vision Section */
+            #vision .grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            #vision .bg-gray-700 {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body class="font-sans bg-gray-800 text-white">
     <!-- Header -->
     <header class="border-b border-gray-700">
         <!-- Upper Header -->
-        <div class="bg-white text-gray-800">
-            <div class="container mx-auto flex justify-between items-center py-2 px-4">
-                <!-- Add Logo Image -->
-                <div class="flex items-center">
-                    <!-- Custom logo size in pixels -->
+        <div class="text-gray-800 header-upper" style="background-color: aliceblue;">
+            <div class="container mx-auto flex-top flex justify-between items-center py-2 px-4">
+                <!-- Logo and Text -->
+                <div class="flex items-center top-header-first">
                     <img src="asset/logoWelshyShrooms.png" alt="Company Logo" class="h-18 w-18 ml-10 mr-6 rounded-full">
                     <!-- Added padding-left for more space between logo and text -->
                     <div class="text-4xl text-gray-700 font-bold pl-6">WELSHY SHROOMS</div>
                 </div>
-                <div class="text-sm h-10">
-                    <span class="text-xl">Email: Info@welshyshrooms.com</span> | <span class="text-xl">Contact: +91 7565900909</span>
+                <!-- Contact Info -->
+                <div class="text-sm h-10 top-header-second " style="color: #355384;">
+                    <span class="text-xl" >
+                        <strong><i class="fas fa-envelope"></i> Email: Info@welshyshrooms.com</strong>
+                    </span>
+                    <br>
+                    <span class="text-xl">
+                        <strong><i class="fas fa-phone"></i> Contact: +91 7565900909</strong>
+                    </span>
                 </div>
+                
             </div>
         </div>
 
         <!-- Lower Header -->
-        <nav class="bg-gray-700">
+        <nav class="bg-gray-700 header-lower">
             <div class="container mx-auto flex justify-around py-3">
                 <a href="#how-product" class="hover:text-blue-400 transition-colors">Products</a>
                 <a href="#contact" class="hover:text-blue-400 transition-colors">About Us</a>
@@ -45,18 +143,18 @@
         <div class="relative overflow-hidden rounded-lg">
             <!-- Slides -->
             <div class="flex transition-transform duration-500 ease-out" id="carousel">
-                <img src="asset/cover2.jpg" class="w-full flex-shrink-0" alt="Slide 1">
-                <img src="asset/cover3.jpg" class="w-full flex-shrink-0" alt="Slide 2">
-                <img src="asset/cover4.jpg" class="w-full flex-shrink-0" alt="Slide 3">
-                <img src="asset/cover5.jpg" class="w-full flex-shrink-0" alt="Slide 4">
+                <img src="asset/cover2.jpg" class="w-full h-auto flex-shrink-0" alt="Slide 1">
+                <img src="asset/cover3.jpg" class="w-full h-auto flex-shrink-0" alt="Slide 2">
+                <img src="asset/cover4.jpg" class="w-full h-auto flex-shrink-0" alt="Slide 3">
+                <img src="asset/cover5.jpg" class="w-full h-auto flex-shrink-0" alt="Slide 4">
             </div>
         </div>
 
         <!-- Controls -->
-        <button id="prev" class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors">
+        <button id="prev" class="absolute top-1/2 left-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors carousel-controls">
             <span>&lt;</span>
         </button>
-        <button id="next" class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors">
+        <button id="next" class="absolute top-1/2 right-2 -translate-y-1/2 bg-gray-700 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-gray-600 transition-colors carousel-controls">
             <span>&gt;</span>
         </button>
 
@@ -71,14 +169,13 @@
 
     <!-- Product Details Section -->
     <section id="how-product" class="w-full flex items-center justify-between mt-4 bg-gray-800 py-16">
-
         <!-- Image Section -->
-        <div class="w-1/2">
+        <div class="mr-6 w-full md:w-1/2">
             <img src="asset/product1.png" alt="Image description" class="w-full h-auto rounded-lg shadow-2xl">
         </div>
 
         <!-- Product Description Section -->
-        <div class="md:w-1/2 flex flex-col pl-10">
+        <div class="w-full md:w-1/2 flex flex-col md:pl-10">
             <h1 class="font-bold text-blue-400 mb-6 text-6xl">Mushroom Blend Powder</h1>
             <p class="mt-4 text-lg text-gray-300">
                 Discover the natural benefits of our organic mushroom powder, crafted to support your overall health and well-being with just a teaspoon a day.
@@ -149,7 +246,7 @@
                 <h4 class="text-lg font-bold text-blue-400">About</h4>
                 <p class="mt-2 text-sm text-gray-300">We provide high-quality products tailored to your needs. Our goal is to ensure customer satisfaction.</p>
             </div>
-    
+
             <!-- Footer Column 2 -->
             <div>
                 <h4 class="text-lg font-bold text-blue-400">Quick Links</h4>
@@ -169,7 +266,7 @@
                     </li>
                 </ul>
             </div>
-    
+
             <!-- Footer Column 3 -->
             <div>
                 <h4 class="text-lg font-bold text-blue-400">Contact Us</h4>
@@ -184,10 +281,9 @@
             &copy; 2025 Product Company. All rights reserved.
         </div>
     </footer>
-    
 
     <script>
-        // JavaScript for Carousel
+        // JavaScript for Carousel (unchanged)
         const carousel = document.getElementById('carousel');
         const slides = carousel.children;
         const prevButton = document.getElementById('prev');
@@ -196,7 +292,6 @@
 
         let currentIndex = 0;
 
-        // Update carousel position
         const updateCarousel = (index) => {
             carousel.style.transform = `translateX(-${index * 100}%)`;
             indicators.forEach((indicator, i) => {
@@ -205,19 +300,16 @@
             });
         };
 
-        // Next button
         nextButton.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % slides.length;
             updateCarousel(currentIndex);
         });
 
-        // Previous button
         prevButton.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + slides.length) % slides.length;
             updateCarousel(currentIndex);
         });
 
-        // Indicator buttons
         indicators.forEach((indicator) => {
             indicator.addEventListener('click', (e) => {
                 currentIndex = parseInt(e.target.getAttribute('data-slide'));
@@ -225,7 +317,6 @@
             });
         });
 
-        // Initialize
         updateCarousel(currentIndex);
     </script>
 </body>
