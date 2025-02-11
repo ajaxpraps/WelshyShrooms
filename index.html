@@ -12,6 +12,33 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <style>
+               /* Styling for the bar */
+               .coming-soon-bar {
+            
+            top: 0; /* Change to bottom: 0; for bottom placement */
+            width: 100%;
+            background-color: aliceblue;
+            color: #374151;
+            font-size: 25px;    
+            font-weight: bold;
+            padding: 10px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Moving text */
+        .moving-text {
+            display: inline-block;
+            padding-left: 100%;
+            animation: moveText 20s linear infinite; /* Increased time for slower movement */
+        }
+
+        @keyframes moveText {
+            from { transform: translateX(0); }
+            to { transform: translateX(-100%); }
+        }
         /* Mobile-Specific CSS */
         @media (max-width: 768px) {
             /* Header Adjustments */
@@ -210,8 +237,11 @@
                 </p>
             </div>
         </div>
+        
     </section>
-
+    <div class="coming-soon-bar">
+        <span class="moving-text"> More products coming soon . . .</span>
+    </div>
     <!-- Vision Section -->
     <div id="vision" class="bg-gray-600 py-12 px-4">
         <div class="container mx-auto text-center">
@@ -246,6 +276,7 @@
 
     <!-- Footer -->
     <footer id="contact" class="bg-gray-800 text-white py-6">
+       
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
             <!-- Footer Column 1 -->
             <div>
